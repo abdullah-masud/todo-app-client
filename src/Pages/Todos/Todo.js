@@ -25,6 +25,7 @@ const Todo = ({ todo, todos, setTodos }) => {
 
     const handleComplete = () => {
         setStrike("line-through")
+        toast.success('Todo Completed')
     }
 
     return (
