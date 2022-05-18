@@ -20,6 +20,8 @@ const Todos = () => {
                     todos.map((todo) => <Todo
                         key={todo._id}
                         todo={todo}
+                        setTodos={setTodos}
+                        todos={todos}
                     ></Todo>)
                 }
             </div>
