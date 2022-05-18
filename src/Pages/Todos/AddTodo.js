@@ -7,7 +7,7 @@ const AddTodo = () => {
 
     const onSubmit = data => {
         console.log(data.description)
-        const url = `http://localhost:5000/todo`;
+        const url = `https://tranquil-chamber-47257.herokuapp.com/todo`;
         fetch(url, {
             method: 'POST',
             headers: {
