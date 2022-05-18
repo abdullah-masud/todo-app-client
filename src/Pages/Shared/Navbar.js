@@ -12,19 +12,19 @@ const Navbar = () => {
     }
 
     return (
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
+        <div className="navbar bg-base-100">
+            <div className="navbar-start">
                 <Link to='/home' className="btn btn-ghost normal-case text-xl">To Do App</Link>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex">
             </div>
-            <div class="navbar-end">
-                <Link to='/home' class="btn btn-outline mr-2">Home</Link>
+            <div className="navbar-end">
+                <Link to='/home' className="btn btn-outline mr-2">Home</Link>
                 {
                     user ?
-                        <Link to='/login' onClick={logout} class="btn">Logout</Link>
+                        <Link to='/login' onClick={logout} className="btn">Logout</Link>
                         :
-                        <Link to='/login' class="btn">Login</Link>
+                        <Link to='/login' className="btn">Login</Link>
                 }
             </div>
         </div >

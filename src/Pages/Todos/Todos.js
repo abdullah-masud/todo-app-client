@@ -17,7 +17,7 @@ const Todos = () => {
             <AddTodo />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6 my-3'>
                 {
-                    todos.map((todo) => <Todo
+                    todos.map((todo, index) => <Todo
                         key={todo._id}
                         todo={todo}
                         setTodos={setTodos}
