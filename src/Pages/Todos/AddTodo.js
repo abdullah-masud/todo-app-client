@@ -1,23 +1,33 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 
 const AddTodo = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
+    const [user] = useAuthState(auth);
 
     const onSubmit = data => {
-        console.log(data.description)
-        const url = `https://tranquil-chamber-47257.herokuapp.com/todo`;
+        // console.log(data.description)
+        const todo = {
+            taskName: data.taskName,
+            description: data.description,
+            email: user.email
+
+        }
+        const url = `http://localhost:5000/todo`;
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(todo)
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
+                reset()
                 toast.success('Todo Added')
             })
     };
