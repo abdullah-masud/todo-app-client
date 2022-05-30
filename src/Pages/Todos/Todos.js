@@ -26,7 +26,7 @@ const Todos = () => {
                         todo={todo}
                         setTodos={setTodos}
                         todos={todos}
-                    ></Todo>)
+                    ></Todo>).reverse()
                 }
             </div>
         </div>
