@@ -6,7 +6,7 @@ const Todo = ({ todo, todos, setTodos }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You Sure?');
         if (proceed) {
-            const url = `http://localhost:5000/todos/${id}`;
+            const url = `https://tranquil-chamber-47257.herokuapp.com/todos/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -22,7 +22,7 @@ const Todo = ({ todo, todos, setTodos }) => {
 
     const handleComplete = (id) => {
         const isComplete = true;
-        fetch(`http://localhost:5000/complete/${id}`, {
+        fetch(`https://tranquil-chamber-47257.herokuapp.com/complete/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

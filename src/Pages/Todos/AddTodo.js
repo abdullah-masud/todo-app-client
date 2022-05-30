@@ -16,7 +16,7 @@ const AddTodo = () => {
             email: user.email
 
         }
-        const url = `http://localhost:5000/todo`;
+        const url = `https://tranquil-chamber-47257.herokuapp.com/todo`;
         fetch(url, {
             method: 'POST',
             headers: {

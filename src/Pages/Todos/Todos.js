@@ -9,7 +9,7 @@ const Todos = () => {
     const [user] = useAuthState(auth)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/todos?email=${user.email}`)
+        fetch(`https://tranquil-chamber-47257.herokuapp.com/todos?email=${user.email}`)
             .then(res => res.json())
             .then(data => setTodos(data))
     }, [todos, user.email])
